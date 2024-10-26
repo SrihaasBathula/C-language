@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+void addition(int a,int b) {
+    printf("addition of %d and %d is: %d\n",a,b, a+b);
+}
+
+void subtraction(int a,int b) {
+    printf("subtracting %d from %d we get : %d \n",a,b, a-b);
+}
+
+void multiplication(int a,int b) {
+    printf("multiplication of %d and %d is: %d\n",a,b, a * b);
+}
+
+void division(int a,int b){
+    if(b!=0){
+    printf("diviasion of %d and %d is: %d\n",a,b, a/b);
+    } else {
+        printf("Error: division by zero is not possible.\n");
+    }
+}
+
+void main() {
+    printf("Choose a number:\n");
+    printf("1.Addition\n");
+    printf("2.subtraction\n");
+    printf("3.multiplication\n");
+    printf("4.division\n");
+    
+    int choice;
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+    
+    switch (choice) {
+        case 1: {
+            int a, b;
+            printf("Enter numbers: ");
+            scanf("%d %d", &a, &b);
+            addition(a, b);
+            break;
+        }
+        case 2: {
+            int a, b;
+            printf("Enter numbers: ");
+            scanf("%d%d", &a, &b);
+            subtraction(a, b);
+            break;
+        }
+        case 3: {
+            int a, b;
+            printf("Enter numbers: ");
+            scanf("%d%d", &a, &b);
+            multiplication(a, b);
+            break;
+        }
+        case 4: {
+            int a, b;
+            printf("Enter numbers: ");
+            scanf("%d %d", &a,&b);
+            division(a, b);
+            break;
+        }
+        default:
+            printf("wrong choice\n");
+            break;
+    }
+}
